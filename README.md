@@ -43,7 +43,7 @@ The machine required extensive mechanical overhaul before the electronics could 
 *Figure 4: Integrated digital tachometer and DRO.*
 
 ![MCU Wiring](docs/mcu_wiring.jpg)
-*Figure 5:  PLC transition
+*Figure 5: Wiring prototype prior to PLC transition.*
 
 ## Logic Flow
 1.  **Fault Check**: On boot, system enters FAULT state. Requires physical reset.
