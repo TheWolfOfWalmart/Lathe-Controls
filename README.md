@@ -1,13 +1,13 @@
 # Engine Lathe VFD Control System
 
 ![Lathe Overview](docs/lathe_overview.jpg)
-*Figure 1: The retrofitted 1960s engine lathe with modern VFD controls.*
+Figure 1: Arrival of the 1960s engine lathe
 
 ## Overview
 This project contains the embedded control logic for a hardware retrofit of a 1960s-era Engine Lathe. 
 
 ### The Salvage Story
-This project began with a high-stakes rescue. I received a call that a local manufacturing plant was scheduled to scrap this machine the following day. Within 24 hours, I had to arrange for a forklift, rig the machine, and transport it to my shop to prevent it from being destroyed.
+This project began with a high-stakes rescue. I received a call that a local manufacturing plant was scheduled to scrap this machine the following day. Within 24 hours, I had to arrange for a forklift, learn how to drive a forklift, rig the machine, and transport it to my shop to prevent it from being destroyed.
 
 ### Mechanical Restoration & Engineering Challenges
 The machine required extensive mechanical overhaul before the electronics could be integrated:
@@ -28,10 +28,6 @@ The machine required extensive mechanical overhaul before the electronics could 
 -   **Outputs**:
     -   Electromechanical Relays (Switching 24V VFD logic inputs).
     -   Fault Clear Signal (Relay-driven reset command to VFD).
-
-![Control Cabinet](docs/control_cabinet_internal.jpg)
-*Figure 2: Internal view of the control cabinet and relay integration.*
-
 ## Key Features
 -   **State Machine Control**: Robust handling of Idle, Forward, Reverse, and Fault states.
 -   **Dual-Station Support**: Full control of spindle direction from both the headstock and the carriage station.
@@ -41,13 +37,13 @@ The machine required extensive mechanical overhaul before the electronics could 
 
 ## Media
 ![Operator Panel](docs/operator_panel.jpg)
-*Figure 3: Custom operator control panel.*
+*Figure 3: Custom machined and engraved control panel.*
 
 ![Tachometer Display](docs/tachometer_display.jpg)
 *Figure 4: Integrated digital tachometer and DRO.*
 
 ![MCU Wiring](docs/mcu_wiring.jpg)
-*Figure 5: Prototype Arduino Mega 2560 wiring and terminal shield.*
+*Figure 5:  PLC transition
 
 ## Logic Flow
 1.  **Fault Check**: On boot, system enters FAULT state. Requires physical reset.
