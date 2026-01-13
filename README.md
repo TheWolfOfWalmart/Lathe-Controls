@@ -1,7 +1,8 @@
 # Engine Lathe VFD Control System
 
 ![Lathe Overview](docs/lathe_overview.jpg)
-*Figure 1: I can fix her
+*Figure 1: The retrofitted 1960s engine lathe with modern VFD controls.*
+
 ## Overview
 This project contains the embedded control logic for a hardware retrofit of a 1960s-era Engine Lathe. 
 
@@ -14,7 +15,7 @@ The machine required extensive mechanical overhaul before the electronics could 
 -   **Precision Straightening**: The cross-feed shaft was significantly bent; I utilized flame-straightening techniques to restore it to functional tolerance.
 -   **The Limit of Restoration**: Despite the success of the mechanical and electronic retrofits, the lathe's ways were found to be warped. The cost of shipping and professional regrinding exceeded the machine's value. When offered a fully operational lathe later that year, I made the strategic decision to sell this project to a collector and transition to a working machine.
 
-> **Note:** This codebase represents the functional prototype...
+> **Note:** This codebase represents the functional prototype. The final industrial deployment was translated to Ladder Logic on a PLC for long-term reliability, but this repository demonstrates the core control algorithms and safety architecture.
 
 ## System Architecture
 ### Hardware
@@ -27,7 +28,9 @@ The machine required extensive mechanical overhaul before the electronics could 
 -   **Outputs**:
     -   Electromechanical Relays (Switching 24V VFD logic inputs).
     -   Fault Clear Signal (Relay-driven reset command to VFD).
-- **DRO**
+
+![Control Cabinet](docs/control_cabinet_internal.jpg)
+*Figure 2: Internal view of the control cabinet and relay integration.*
 
 ## Key Features
 -   **State Machine Control**: Robust handling of Idle, Forward, Reverse, and Fault states.
@@ -44,7 +47,8 @@ The machine required extensive mechanical overhaul before the electronics could 
 *Figure 4: Integrated digital tachometer and DRO.*
 
 ![MCU Wiring](docs/mcu_wiring.jpg)
-*Figure 5: Eventual PLC
+*Figure 5: Prototype Arduino Mega 2560 wiring and terminal shield.*
+
 ## Logic Flow
 1.  **Fault Check**: On boot, system enters FAULT state. Requires physical reset.
 2.  **Idle**: System awaits Forward or Reverse command from either station.
